@@ -1,0 +1,21 @@
+.container {
+    padding: 20px;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  /* background: linear-gradient(120deg, #ff9a76, #ff6b6b, #feca57, #1dd1a1); */
+  background-size: 300% 300%;
+  background-color: greenyellow;
+  animation: gradientBG 10s ease infinite;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+

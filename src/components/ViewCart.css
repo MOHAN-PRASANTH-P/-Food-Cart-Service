@@ -1,0 +1,208 @@
+/* Root wrapper created implicitly by ViewCart component */
+.view-cart-page {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+  background: #e2cf78;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Emoji animation layer */
+.view-cart-page::before {
+  content: "🍔 🍕 🍟 🍗 🌮 🛒 🍩 🍜 🥤";
+  position: absolute;
+  inset: 0;
+  font-size: 2.2rem;
+  opacity: 3.12;
+  line-height: 3.5rem;
+  word-spacing: 2rem;
+  animation: floatFood 20s linear infinite;
+  white-space: nowrap;
+  z-index: 0;
+}
+
+.view-cart-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes floatFood {
+  0% {
+    transform: translate(+24px, 0);
+  }
+  50% {
+    transform: translate(60px, -40px);
+  }
+  100% {
+    transform: translate(+44px, 0);
+  }
+}
+
+
+.view-cart-page h4 {
+  color: rgb(206, 57, 57);
+}
+
+/* Cart Heading */
+.view-cart-page > h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  color: #ff5722;
+  margin-bottom: 25px;
+}
+
+/* Each cart item */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  background: #fafafa;
+  border: 1px solid #eee;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Item name */
+.cart-item h3 {
+  font-size: 18px;
+  margin: 0;
+  color: #333;
+}
+
+/* Price calculation */
+.cart-item p {
+  margin-top: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #555;
+}
+
+/* Remove button */
+.cart-item button {
+  background: linear-gradient(90deg, #e53935, #d32f2f);
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cart-item button:hover {
+  background: linear-gradient(90deg, #c62828, #b71c1c);
+}
+
+/* Total amount */
+.view-cart-page > h2 {
+  text-align: right;
+  margin-top: 25px;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: oblique;
+  color: #009688;
+}
+
+.view-cart-page > h3 {
+  color: rgb(119, 37, 243);
+  font-weight: bold;
+  font-style: oblique;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Order Now button */
+.order-btn {
+  display: block;
+  margin: 25px auto 0;
+  padding: 14px 32px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(90deg, #28a745, #43c75a);
+}
+
+.order-btn:hover {
+  background: linear-gradient(90deg, #218838, #2ea44f);
+}
+
+.order-confirmed-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: oblique;
+  color: #26ff00;
+  font-size: 38px;
+  font-weight: bold;
+  z-index: 9999;
+  flex-direction: column;
+  text-align: center;
+}
+
+.order-confirmed-screen > h1 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: oblique;
+  color: #FFD700;
+}
+
+/* Table Number Input Container */
+.table-number-container {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Table Number Label */
+.table-number-container label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Table Number Input Box */
+.table-number-container input {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 2px solid #ccc;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: 100px;
+  text-align: center;
+  outline: none;
+}
+
+/* Focus animation */
+.table-number-container input:focus {
+  border-color: #28a745;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+  transform: scale(1.05);
+}
+
+/* Hover animation */
+.table-number-container input:hover {
+  border-color: #43c75a;
+  transform: scale(1.02);
+}
