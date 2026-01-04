@@ -1,5 +1,4 @@
 body {
-  /* background-color:  rgba(28, 18, 8, 0.92); */
   background-color: #571512;
 }
 
@@ -28,12 +27,12 @@ body {
 .search-icon {
   position: absolute;
   left: 14px;
-  top: 20px;
+  top: 50%;
   transform: translateY(-50%);
   font-size: 18px;
   pointer-events: none;
-  color: #571512;              /* dark maroon for contrast */
-  z-index: 2;                  /* ensures above input */
+  color: #571512;
+  z-index: 2;
 }
 
 .search-box {
@@ -42,55 +41,21 @@ body {
   border: none;
   border-radius: 12px;
   font-size: 16px;
-  background: rgba(234, 230, 230, 0.905);
+  background: rgba(247, 233, 233, 0.15);
+  color: #fff;
   backdrop-filter: blur(12px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   transition: all 0.3s ease;
+}
+
+.search-box::placeholder {
+  color: rgba(255,255,255,0.7);
 }
 
 .search-box:focus {
   outline: none;
-  box-shadow: 0 0 10px rgba(255, 152, 0, 0.6);
-  background: rgba(247, 233, 233, 0.905);
-}
-
-.recommend-box {
-  margin-top: 12px;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-  overflow: hidden;
-  animation: fadeIn 0.4s ease-in-out;
-}
-
-.recommend-box h4 {
-  margin: 0;
-  padding: 12px 16px;
-  font-size: 16px;
-  color: #008080;
-  background: #f9f9f9;
-  border-bottom: 1px solid #eee;
-}
-
-.recommend-box ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  max-height: 180px;
-  overflow-y: auto;
-}
-
-.recommend-box li {
-  padding: 12px 16px;
-  font-size: 15px;
-  cursor: pointer;
-  color: #444;
-  transition: background 0.2s;
-}
-
-.recommend-box li:hover {
-  background: #f2f2f2;
+  box-shadow: 0 0 12px rgba(247, 195, 49, 0.8);
+  background: rgba(247, 233, 233, 0.25);
 }
 
 .Products {
@@ -103,168 +68,12 @@ body {
   margin-top: 20px;
 }
 
-.dsa-section {
-  margin-top: 50px;
-  padding: 25px 30px;
-  width: 95%;
-  max-width: 850px;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(14px);
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-  animation: slideUp 0.6s ease;
-}
-
-.dsa-section h3 {
-  color: #ff5722;
-  font-size: 20px;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-.dsa-section ul {
-  list-style: disc inside;
-  margin: 10px 0 20px;
-  padding: 0 10px;
-}
-
-.dsa-section li {
-  font-size: 16px;
-  margin-bottom: 6px;
-  color: #333;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-6px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideUp {
-  from { opacity: 0; transform: translateY(25px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.recommendations {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-top: 10px;
-}
-
-.recommend-card {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 10px;
-  text-align: center;
-  width: 150px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
-  background: #fff;
-}
-
-.recommend-card:hover {
-  transform: scale(1.05);
-}
-
-.recommend-img {
-  width: 100%;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.add-btn {
-  margin-top: 8px;
-  padding: 6px 10px;
-  background: #ff6600;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background 0.2s;
-}
-
-.add-btn:hover {
-  background: #e65c00;
-}
-
-.copyright {
-   display: flex;
-   justify-content: flex-end;
-   align-items: flex-end;
-   height: 39px;
-   color:gold;
-}
-
-.restaurant-name {
-  font-size: 3rem;
-  font-family: 'Playfair Display', serif;
-  letter-spacing: 2px;
-  font-weight: bold;
-  color: #fbff08;
-  text-shadow: 2px 2px 8px rgba(255,255,255,0.2);
-}
-
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.tagline {
-  font-size: 1.3rem;
-  font-style:normal;
-  color: #f7f4f4f4;
-  position: relative;
-  top: -20px;
-  left: 10px;
-}
-
-.restaurant-tamil img{
-  width: 80px;
-  height: 70px;
-  position: relative;
-  top: 20px;
-  right: 3px;
-}
-
-.restaurant-name {
-  font-size: 1.5rem;
-  font-family: 'Playfair Display', serif;
-  color: #ffd500;
-  text-shadow: 0 0 10px #020202, 0 0 20px #ffb347;
-  animation: glow 4s ease-in-out infinite alternate;
-  position: relative;
-  left: 35px;
-  top: -20px;
-}
-
-.restaurant-tamil {
-  font-size: 1.5rem;
-  font-family: 'Playfair Display', serif;
-  color: #ffd500;
-  text-shadow: 0 0 10px #121111, 0 0 20px #ff9500;
-  animation: glow 2s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-  from { text-shadow: 0 0 5px #ffda7f, 0 0 15px #ffb347, 0 0 30px #ff9f0f; }
-  to { text-shadow: 0 0 20px #ffda7f, 0 0 40px #ffb347, 0 0 60px #ff9f0f; }
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
 .hero-section {
-  position: relative;
   width: 100%;
   height: 350px;
   overflow: hidden;
   border-radius: 40px;
-  top: 20px;
+  position: relative;
 }
 
 .hero-video {
@@ -275,37 +84,178 @@ body {
 
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3); 
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.3);
   z-index: 1;
 }
 
+/* ===== HERO CONTENT VERTICALLY CENTERED ===== */
 .hero-content {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); /* perfectly center in the transparent area */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* vertical centering inside hero-content */
   text-align: center;
   color: white;
   z-index: 3;
-  backdrop-filter: blur(8px); 
-  background: rgba(0, 0, 0, 0.2);
-  padding: 20px 40px;
+  backdrop-filter: blur(8px);
+  background: rgba(0,0,0,0.2);
+  padding: 20px 30px;
   border-radius: 30px;
+  min-width: 300px;
+  max-width: 90%;
   width: 500px;
-  height: 160px;
+  height: auto;
+  gap: 10px; /* spacing between logo, names, and tagline */
 }
 
-/* optional: add soft glowing steam animation */
-.steam {
-  position: absolute;
-  top: 0;
-  left: 0;
+/* Logo */
+.hero-content img {
+  max-width: 120px;
+  height: auto;
+}
+
+/* Tamil name */
+.hero-content .restaurant-tamil {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* English name */
+.hero-content .restaurant-name {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Tagline */
+.hero-content .tagline {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  color: #f7c331;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .hero-content {
+    width: 400px;
+    padding: 15px 20px;
+  }
+  .hero-content img {
+    max-width: 100px;
+  }
+  .hero-content .restaurant-tamil {
+    font-size: 18px;
+  }
+  .hero-content .restaurant-name {
+    font-size: 20px;
+  }
+  .hero-content .tagline {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Products {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  .hero-content {
+    width: 90%;
+    padding: 12px 15px;
+    text-align: center;
+  }
+  .hero-content img {
+    max-width: 80px;
+  }
+  .hero-content .restaurant-tamil {
+    font-size: 16px;
+  }
+  .hero-content .restaurant-name {
+    font-size: 18px;
+  }
+  .hero-content .tagline {
+    font-size: 12px;
+  }
+  .search-box {
+    font-size: 14px;
+    padding: 12px 14px 12px 40px;
+  }
+}
+
+/* ========== Upgraded Search Suggestions ========== */
+.recommend-box {
   width: 100%;
-  height: 100%;
-  z-index: 2;
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  margin-top: 8px;        
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  animation: fadeInDrop 0.25s ease-in-out;
+  backdrop-filter: blur(6px);
+  border: 1px solid #f7c331;
 }
 
+.recommend-box h4 {
+  margin: 0;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: 700;
+  background: #f7c331;
+  color: #571512;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #e6b72c;
+}
+
+.recommend-box ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 220px;
+}
+
+.recommend-box li {
+  padding: 10px 16px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.recommend-box li:hover {
+  background: rgba(247, 195, 49, 0.25);
+  color: #fff;
+  transform: scale(1.03);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+@keyframes fadeInDrop {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.copyright { 
+  position: relative;
+  top: 30px;
+  font-weight: bold;
+  color: goldenrod;
+}
