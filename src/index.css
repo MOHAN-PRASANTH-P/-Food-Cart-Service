@@ -25,7 +25,9 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -33,6 +35,8 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  text-align: center;
+  margin: 0.5em 0;
 }
 
 button {
@@ -43,9 +47,11 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
+  color: #fff;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: all 0.25s ease;
 }
+
 button:hover {
   border-color: #646cff;
 }
@@ -64,5 +70,23 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+    color: #000;
   }
 }
+
+/* Responsive Fonts and Buttons */
+@media (max-width: 1024px) {
+  h1 { font-size: 2.6em; }
+  button { font-size: 0.95em; padding: 0.55em 1.1em; }
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 2em; }
+  button { font-size: 0.9em; padding: 0.5em 1em; }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.6em; }
+  button { font-size: 0.85em; padding: 0.45em 0.9em; }
+}
+
