@@ -44,10 +44,12 @@
   border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
 .Product-Items button:hover {
   background: linear-gradient(90deg, #00796b, #009688);
+  transform: scale(1.05);
 }
 
 /* Quantity box */
@@ -70,3 +72,38 @@
   font-size: 18px;
   font-weight: bold;
 }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .Product-Items {
+    width: 200px;
+  }
+  .Product-Items img {
+    height: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Product-Items {
+    width: 100%;
+    max-width: 180px;
+    margin: 10px auto;
+  }
+  .Product-Items img {
+    height: 120px;
+  }
+  .Product-Items h3 {
+    font-size: 14px;
+  }
+  .Product-Items p {
+    font-size: 13px;
+  }
+  .Product-Items button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  .qty-box button, .qty-box span {
+    font-size: 16px;
+  }
+}
+
