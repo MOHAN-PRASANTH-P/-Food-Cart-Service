@@ -2,7 +2,7 @@ import React from "react";
 import aboutImage from "../assets/about-page.png";
 import portraitImage from "../assets/portrait.png";
 import groupImage from "../assets/groupImage.jpg";
-import "./About.css"; 
+import "./about.css"; 
 
 export const About = () => {
   return (
