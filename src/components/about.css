@@ -1,6 +1,10 @@
 .about-container {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #e6cc28;
 }
 
 .about-container h1 {
@@ -31,30 +35,21 @@
   box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
 }
 
-
-.about-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #e6cc28;
-}
-
+/* Main portrait & text section */
 .about-main {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   align-items: center;
   margin-bottom: 3rem;
 }
 
-.about-texts {     
-   display: flex;
-  flex-direction: column; /* stack paragraphs vertically */
-  align-items: flex-end;  /* move all to the right */
-  text-align: right;      /* align text inside to the right too */
-  margin-top: -440px;
-  margin-left: 430px;
-  margin-right: 0px;
+.about-texts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  margin: 0;
 }
 
 .about-portrait {
@@ -62,20 +57,18 @@
 }
 
 .about-portrait img {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  top: 65px;
-  width: 410px;
-  height: 440px;
+  width: 100%;
+  max-width: 410px;
+  height: auto;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .about-bottom {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   align-items: flex-start;
-  flex-wrap: wrap;
 }
 
 .about-bottom-text {
@@ -93,6 +86,37 @@
   border-radius: 10px;
   object-fit: cover;
   box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
-  position: relative;
-  top: 40px;
+}
+
+/* Responsive media queries */
+@media (max-width: 1024px) {
+  .about-main {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-texts {
+    align-items: center;
+    text-align: center;
+  }
+  .about-portrait img {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 1rem;
+  }
+  .about-portrait img {
+    max-width: 250px;
+  }
+  .about-bottom {
+    flex-direction: column;
+  }
+  .about-bottom-text, .about-group {
+    flex: 1 1 100%;
+  }
+  .about-text {
+    font-size: 1rem;
+  }
 }
