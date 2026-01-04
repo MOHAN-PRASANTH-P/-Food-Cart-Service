@@ -1,4 +1,3 @@
-/* Root wrapper created implicitly by ViewCart component */
 .view-cart-page {
   max-width: 800px;
   margin: 30px auto;
@@ -11,13 +10,12 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
-/* Emoji animation layer */
 .view-cart-page::before {
   content: "🍔 🍕 🍟 🍗 🌮 🛒 🍩 🍜 🥤";
   position: absolute;
   inset: 0;
   font-size: 2.2rem;
-  opacity: 3.12;
+  opacity: 0.3;
   line-height: 3.5rem;
   word-spacing: 2rem;
   animation: floatFood 20s linear infinite;
@@ -31,23 +29,15 @@
 }
 
 @keyframes floatFood {
-  0% {
-    transform: translate(+24px, 0);
-  }
-  50% {
-    transform: translate(60px, -40px);
-  }
-  100% {
-    transform: translate(+44px, 0);
-  }
+  0% { transform: translate(24px, 0); }
+  50% { transform: translate(60px, -40px); }
+  100% { transform: translate(44px, 0); }
 }
-
 
 .view-cart-page h4 {
   color: rgb(206, 57, 57);
 }
 
-/* Cart Heading */
 .view-cart-page > h1 {
   text-align: center;
   font-size: 30px;
@@ -56,7 +46,6 @@
   margin-bottom: 25px;
 }
 
-/* Each cart item */
 .cart-item {
   display: flex;
   justify-content: space-between;
@@ -74,14 +63,12 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
-/* Item name */
 .cart-item h3 {
   font-size: 18px;
   margin: 0;
   color: #333;
 }
 
-/* Price calculation */
 .cart-item p {
   margin-top: 6px;
   font-size: 16px;
@@ -89,7 +76,6 @@
   color: #555;
 }
 
-/* Remove button */
 .cart-item button {
   background: linear-gradient(90deg, #e53935, #d32f2f);
   border: none;
@@ -104,7 +90,6 @@
   background: linear-gradient(90deg, #c62828, #b71c1c);
 }
 
-/* Total amount */
 .view-cart-page > h2 {
   text-align: right;
   margin-top: 25px;
@@ -118,10 +103,9 @@
   color: rgb(119, 37, 243);
   font-weight: bold;
   font-style: oblique;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', sans-serif;
 }
 
-/* Order Now button */
 .order-btn {
   display: block;
   margin: 25px auto 0;
@@ -141,11 +125,9 @@
 
 .order-confirmed-screen {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -160,18 +142,16 @@
 }
 
 .order-confirmed-screen > h1 {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', sans-serif;
   font-style: oblique;
   color: #FFD700;
 }
 
-/* Table Number Input Container */
 .table-number-container {
   margin-bottom: 25px;
   text-align: center;
 }
 
-/* Table Number Label */
 .table-number-container label {
   font-size: 18px;
   font-weight: bold;
@@ -181,7 +161,6 @@
   gap: 10px;
 }
 
-/* Table Number Input Box */
 .table-number-container input {
   padding: 10px 14px;
   border-radius: 12px;
@@ -194,15 +173,55 @@
   outline: none;
 }
 
-/* Focus animation */
 .table-number-container input:focus {
   border-color: #28a745;
   box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
   transform: scale(1.05);
 }
 
-/* Hover animation */
 .table-number-container input:hover {
   border-color: #43c75a;
   transform: scale(1.02);
 }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .view-cart-page {
+    max-width: 90%;
+    padding: 18px;
+  }
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .cart-item h3, .cart-item p {
+    font-size: 16px;
+  }
+  .order-btn {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .view-cart-page {
+    padding: 15px;
+    margin: 20px auto;
+  }
+  .cart-item h3 {
+    font-size: 14px;
+  }
+  .cart-item p {
+    font-size: 14px;
+  }
+  .table-number-container input {
+    width: 80px;
+    font-size: 14px;
+  }
+  .order-confirmed-screen {
+    font-size: 28px;
+  }
+}
+
