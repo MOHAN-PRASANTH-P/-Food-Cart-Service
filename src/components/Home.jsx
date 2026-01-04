@@ -132,11 +132,17 @@ export const Home = () => {
             <div className="overlay"></div>
             <div className="steam"></div>
             <div className="hero-content">
-              <h1 className="restaurant-tamil">
-                <img
+              <div className='thapakatti-logo'>
+                 <img
                   src="https://thalappakatti.com/wp-content/uploads/2024/04/logo-thalappakatti.gif"
                   alt="logo"
                 />
+              </div>
+              <h1 className="restaurant-tamil">
+                {/* <img
+                  src="https://thalappakatti.com/wp-content/uploads/2024/04/logo-thalappakatti.gif"
+                  alt="logo"
+                /> */}
                 திண்டுக்கல் தலப்பாக்கட்டி
               </h1>
               <h1 className="restaurant-name">Dindigul Thalappakatti</h1>
@@ -214,3 +220,4 @@ export const Home = () => {
     </div>
   );
 };
+
